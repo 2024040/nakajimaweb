@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+:root {
+    --border-line: 18px;
+    --h2-font-size: 50px;
+}
+
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    font-size: 17px;
+}
+
+#main {
+    max-width: 1500px;
+    margin: 0 5%;
+}
+
+.main-movie {
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+    /* padding-bottom: 1077px; */
+    aspect-ratio: 16/9;
+    /* padding-bottom: calc(((9 / 16) * 100%) + (300 - ((9 / 16) * 100)) * (100vw - ((9 / 16) * 100%)) / (1200 - ((9 / 16) * 100))); */
+}
+
+
+
+.main-movie iframe {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.main-title-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(0px , 1000 / 1980 * 100vw, 1000px);;
+}
+
+.main-title {
+    display: flex;
+    width: 100%;
+}
+
+.main-title__inner {
+    position: absolute;
+    width: 100%;
+    margin-top: 17%;
+    height: 100%;
+}
+
+.logo {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 500px 10px 10px;
+    margin: 60px 60px 0;
+    /* width: 600px; */
+    /* width: calc(100vw / 3.388); */
+    /* width: calc(600vw / (1980 / 100)); */
+    width: clamp(0px , 600 / 1980 * 100vw, 600px);
+}
+
+.logo-img{
+    z-index: 1;
+}
+
+.blur{
+    position: absolute;
+    top: 465px;
+    left: 0px;
+    width: clamp(0px , 650 / 1980 * 100vw, 650px);
+    height: clamp(0px , 150 / 1980 * 100vw, 150px);
+    border-radius: 100px;
+    background: rgba(188, 188, 188, 0.05);
+    filter: blur(30px);
+    /* backdrop-filter: blur(30px); */
+    box-shadow: inset 0 0 100px 100px rgba(250, 250, 250, 0.6);
+    z-index: -1;
+}
+
+.main-title__inner p {
+    position: absolute;
+    /* top: 900px;
+    left: 700px; */
+    top: clamp(0px , 900 / 1980 * 100vw, 900px);
+    left: clamp(0px , 700 / 1980 * 100vw, 700px);
+    font-size: clamp(24px , 50 / 1980 * 100vw, var(--h2-font-size));
+    width: auto;
+    /* margin: 12.5% 0 0 36%; */
+    /* margin: clamp(0px , 247.5 / 1980 * 100vw, 247.5px) 0 0 clamp(0px, 712.8 / 1980 * 100vw, 712.8px); */
+}
+
+.main-title__inner .border-h {
+    position: absolute;
+    margin: 42% 0 0 90px;
+    width: var(--border-line);
+    height: 20px;
+    border-top: 4px solid #F5864F;
+}
+
+.main-title__inner .border-h::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: var(--border-line);
+    width: var(--border-line);
+    height: 20px;
+    border-top: 4px solid #2DA7A7;
+}
+
+.contents01 {
+    margin-top: 350px;
+}
+
+.contents02{
+    margin-top: 200px;
+}
+
+#main p,
+#main h3 {
+    margin: 2rem 10%;
+}
+
+#main .border-h {
+    width: 36px;
+    padding-left: 18px;
+    height: 20px;
+    border-top: 4px solid #F5864F;
+}
+
+#main .border-h::after {
+    content: "";
+    padding-left: 18px;
+    width: 18px;
+    height: 20px;
+    border-top: 4px solid #2DA7A7;
+}
+
+#main h2 {
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+}
+
+#main .p-area{
+    max-width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    border: solid #BCBCBC 1px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+}
+
+#main .more-area{
+    width: 15%;
+    height: auto;
+    padding: 20px;
+    border: solid #BCBCBC 1px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+#main .more-flex{
+    display: flex;
+    justify-content: end;
+}
+
+#main .adress-area{
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    border: solid #BCBCBC 1px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+#main .adress-area p{
+    margin: 0;
+}
+
+#main .maps{
+    height: 500px;
+    clip-path: inset(0px round 25px);
+    margin: 0 10%;
+}
+
+#main .adr-sns{
+    margin: 0 10%;
+    display: flex;
+}
+
+#main .adr-sns div{
+    width: 100%;
+}
+
+#main .adr-sns p{
+    margin-left: 0;
+}
+
+.footer{
+    padding: 70px 0;
+}
