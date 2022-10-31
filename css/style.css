@@ -9,7 +9,6 @@ body {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 500;
     letter-spacing: .2rem;
-    font-size: 17px;
     color: #252525;
 }
 
@@ -125,17 +124,18 @@ a {
 }
 
 .contents01 {
-    margin-top: 350px;
+    margin-top: 300px;
 }
 
 .contents02{
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 #main p,
 #main h3 {
     margin: 2rem 10%;
     font-weight: 500;
+    font-size: 17px;
 }
 
 #main .border-h {
@@ -156,6 +156,7 @@ a {
 #main h2 {
     font-size: var(--h2-font-size);
     font-weight: 500;
+    margin-bottom: 50px;
 }
 
 #main .p-area{
@@ -169,9 +170,11 @@ a {
 }
 
 #main .more-area{
-    width: 15%;
+    width: 12%;
     height: auto;
     padding: 20px;
+    margin-top: 30px;
+    font-size: 15px;
     border: solid #BCBCBC 1px;
     border-radius: 35px;
     box-sizing: border-box;
@@ -182,6 +185,10 @@ a {
 #main .more-flex{
     display: flex;
     justify-content: end;
+}
+
+#main .contents__inner h3{
+    padding: 20px 0;
 }
 
 #main .adress-area{
