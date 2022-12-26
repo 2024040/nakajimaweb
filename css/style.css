@@ -52,34 +52,45 @@ a {
 }
 
 .main-title {
-    display: flex;
     width: 100%;
 }
 
 .main-title__inner {
     position: absolute;
     width: 100%;
-    margin-top: 17%;
     height: 100%;
 }
 
-.logo {
+/* --- ロゴ動くときのロゴ --- */
+/* .logo {
     position: sticky;
     top: 0;
     left: 0;
     padding: 500px 10px 10px;
-    margin: 60px 60px 0;
+    margin: 60px 60px 0; */
     /* width: 600px; */
     /* width: calc(100vw / 3.388); */
     /* width: calc(600vw / (1980 / 100)); */
-    width: clamp(0px , 600 / 1980 * 100vw, 600px);
+    /* width: clamp(0px , 600 / 1980 * 100vw, 600px);
+} */
+/* ------ */
+
+.logo{
+    width: 22%;
+    height: auto;
+    position: absolute;
+    bottom: 1%;
+    left: 5%;
 }
 
 .logo-img{
+    /* ロゴ固定はsticky追加 */
+    position: sticky;
     z-index: 1;
 }
 
-.blur{
+/* --- ロゴブラー動くときのやつ --- */
+/* .blur{
     position: absolute;
     top: 465px;
     left: 0px;
@@ -87,33 +98,48 @@ a {
     height: clamp(0px , 150 / 1980 * 100vw, 150px);
     border-radius: 100px;
     background: rgba(188, 188, 188, 0.05);
-    filter: blur(30px);
+    filter: blur(30px); */
     /* backdrop-filter: blur(30px); */
-    box-shadow: inset 0 0 100px 100px rgba(250, 250, 250, 0.6);
+    /* box-shadow: inset 0 0 100px 100px rgba(250, 250, 250, 0.6);
     z-index: -1;
+} */
+/* ------ */
+
+/* --- ロゴブラー固定 --- */
+.blur{
+    position: absolute;
+    bottom: 1%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background: rgba(188, 188, 188, 0.05);
+    filter: blur(30px);
+    box-shadow: inset 0 0 100px 100px rgba(250, 250, 250, 0.6);
 }
 
-.main-title__inner p {
-    position: absolute;
+/* --- ロゴ動くときのいろいろ --- */
+/* .main-title__inner p {
+    position: absolute; */
     /* top: 900px;
     left: 700px; */
-    top: clamp(0px , 900 / 1980 * 100vw, 900px);
+    /* top: clamp(0px , 900 / 1980 * 100vw, 900px);
     left: clamp(0px , 700 / 1980 * 100vw, 700px);
     font-size: clamp(24px , 50 / 1980 * 100vw, var(--h2-font-size));
-    width: auto;
+    width: auto; */
     /* margin: 12.5% 0 0 36%; */
     /* margin: clamp(0px , 247.5 / 1980 * 100vw, 247.5px) 0 0 clamp(0px, 712.8 / 1980 * 100vw, 712.8px); */
-}
+/* } */
 
-.main-title__inner .border-h {
+/* .main-title__inner .border-h {
     position: absolute;
     margin: 42% 0 0 90px;
     width: var(--border-line);
     height: 20px;
     border-top: 4px solid #F5864F;
-}
+} */
 
-.main-title__inner .border-h::after {
+/* .main-title__inner .border-h::after {
     content: "";
     position: absolute;
     top: -4px;
@@ -121,11 +147,12 @@ a {
     width: var(--border-line);
     height: 20px;
     border-top: 4px solid #2DA7A7;
-}
+} */
 
-.contents01 {
+/* .contents01 {
     margin-top: 300px;
-}
+} */
+/* -------- */
 
 .contents02{
     margin-top: 150px;
@@ -157,6 +184,7 @@ a {
     font-size: var(--h2-font-size);
     font-weight: 500;
     margin-bottom: 50px;
+    letter-spacing: 5px;
 }
 
 #main .p-area{
@@ -164,19 +192,19 @@ a {
     height: auto;
     padding: 20px 30px;
     border: solid #BCBCBC 1px;
-    border-radius: 35px;
+    border-radius: 100vh;
     box-sizing: border-box;
     background-color: #F5F5F5;
 }
 
 #main .more-area{
-    width: 12%;
+    width: 20%;
     height: auto;
     padding: 20px;
     margin-top: 30px;
     font-size: 15px;
     border: solid #BCBCBC 1px;
-    border-radius: 35px;
+    border-radius: 100vh;
     box-sizing: border-box;
     background-color: #F5F5F5;
     text-align: center;
@@ -193,11 +221,11 @@ a {
 
 #main .adress-area{
     display: block;
-    width: 60%;
-    height: auto;
-    padding: 20px;
+    width: 70%;
+    height: 67.5px;
+    padding: 1.1rem;
     border: solid #BCBCBC 1px;
-    border-radius: 35px;
+    border-radius: 100vh;
     box-sizing: border-box;
     background-color: #F5F5F5;
     text-align: center;
@@ -214,7 +242,7 @@ a {
 }
 
 #main .maps{
-    width: calc(1500px - 20%);
+    width: calc(100% - 20%);
     height: 500px;
     clip-path: inset(0px round 25px);
     margin: 0 10%;
@@ -246,7 +274,7 @@ a {
     padding: 13px;
     background-color: #f5f5f5;
     border: solid #BCBCBC 1px;
-    border-radius: 50px;
+    border-radius: 100vh;
 }
 
 #main .sns-list__item:hover{
@@ -268,6 +296,35 @@ a {
     padding-top: 16px;
 }
 
+#main .sns-list__icon{
+    display: flex;
+    height: 67.5px;
+    align-items: center;
+}
+
 .footer{
     padding: 200px 0 70px 0;
+}
+
+@media screen and (max-width: 480px){
+    #main h2 {
+        font-size: 30px;
+    }
+
+    #main .more-flex{
+        justify-content: inherit;
+    }
+
+    #main .more-area{
+        width: 50%;
+    }
+
+    #main .adr-sns{
+        flex-direction: column;
+    }
+
+    #main .adress-area{
+        width: 100%;
+        padding: 0.5rem;
+    }
 }
