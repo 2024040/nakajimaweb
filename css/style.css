@@ -198,11 +198,11 @@ a {
 }
 
 #main .more-area{
-    width: 20%;
+    width: 15%;
     height: auto;
-    padding: 20px;
+    padding: 15px;
     margin-top: 30px;
-    font-size: 15px;
+    font-size: 14px;
     border: solid #BCBCBC 1px;
     border-radius: 100vh;
     box-sizing: border-box;
@@ -213,6 +213,19 @@ a {
 #main .more-flex{
     display: flex;
     justify-content: end;
+}
+
+#main .more-button{
+    width: 15%;
+    height: auto;
+    padding: 15px;
+    margin-top: 60px;
+    font-size: 14px;
+    border: solid #BCBCBC 1px;
+    border-radius: 100vh;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    text-align: center;
 }
 
 #main .contents__inner h3{
